@@ -128,40 +128,49 @@ _bmad/
 
 ## Quick Reference
 
-| Action              | How                                            |
-| ------------------- | ---------------------------------------------- |
-| Start workflow      | `"Run the BMad Builder create-agent workflow"` |
-| Edit agent directly | Modify `{agent-name}.agent.yaml`               |
-| Edit customization  | Modify `_bmad/_config/agents/{agent-name}`     |
-| Rebuild agent       | `npx bmad-method build <agent-name>`           |
-| Study examples      | Check `src/modules/bmb/reference/agents/`      |
+| Action              | How                                                     |
+| ------------------- | ------------------------------------------------------- |
+| Start workflow      | `"Run the BMad Builder create-agent workflow"`          |
+| Edit agent directly | Modify `{agent-name}.agent.yaml`                        |
+| Edit customization  | Modify `_bmad/_config/agents/{agent-name}`              |
+| Rebuild agent       | `npx bmad-method build <agent-name>`                    |
+| Study examples      | Check `src/modules/bmb/workflows/agent/data/reference/` |
 
 ## Common Questions
 
-**Should I start with Simple or Expert?**
+- [What You'll Learn](#what-youll-learn)
+- [Understanding Agent Types](#understanding-agent-types)
+- [Step 1: Start the Workflow](#step-1-start-the-workflow)
+- [Step 2: Define the Persona](#step-2-define-the-persona)
+- [Step 3: Install Your Agent](#step-3-install-your-agent)
+- [What You've Accomplished](#what-youve-accomplished)
+- [Quick Reference](#quick-reference)
+- [Common Questions](#common-questions)
+  - [Should I start with Simple or Expert?](#should-i-start-with-simple-or-expert)
+  - [How do I add more commands later?](#how-do-i-add-more-commands-later)
+  - [Can I share my agent with others?](#can-i-share-my-agent-with-others)
+  - [Where can I see example agents?](#where-can-i-see-example-agents)
+- [Getting Help](#getting-help)
+
+### Should I start with Simple or Expert?
+
 Start with Simple for your first agent. You can always upgrade to Expert later if you need persistent memory.
 
-**How do I add more commands later?**
+### How do I add more commands later?
+
 Edit the agent YAML directly or use the customization file in `_bmad/_config/agents/`. Then rebuild.
 
-**Can I share my agent with others?**
+### Can I share my agent with others?
+
 Yes. Package your agent as a standalone module and share it with your team or the community.
 
-**Where can I see example agents?**
-Study the reference agents in `src/modules/bmb/reference/agents/`:
-- [commit-poet](https://github.com/bmad-code-org/BMAD-METHOD/tree/main/src/modules/bmb/reference/agents/simple-examples/commit-poet.agent.yaml) (Simple)
-- [journal-keeper](https://github.com/bmad-code-org/BMAD-METHOD/tree/main/src/modules/bmb/reference/agents/expert-examples/journal-keeper) (Expert)
+### Where can I see example agents?
 
-## Getting Help
+Study the reference agents in `src/modules/bmb/workflows/agent/data/reference/`:
+- [commit-poet](https://github.com/bmad-code-org/BMAD-METHOD/tree/main/src/modules/bmb/workflows/agent/data/reference/simple-examples/commit-poet.agent.yaml) (Simple)
+- [journal-keeper](https://github.com/bmad-code-org/BMAD-METHOD/tree/main/src/modules/bmb/workflows/agent/data/reference/expert-examples/journal-keeper/journal-keeper.agent.yaml) (Expert)
 
-- **[Discord Community](https://discord.gg/gk8jAdXWmj)** - Ask in #bmad-method-help or #report-bugs-and-issues
-- **[GitHub Issues](https://github.com/bmad-code-org/BMAD-METHOD/issues)** - Report bugs or request features
-
-## Further Reading
-
-- **[What Are Agents](/docs/explanation/core-concepts/what-are-agents.md)** - Deep technical details on agent types
-- **[Agent Customization](/docs/how-to/customization/customize-agents.md)** - Modify agents without editing core files
-- **[Custom Content Installation](/docs/how-to/installation/install-custom-modules.md)** - Package and distribute your agents
+**Have a question not answered here?** Ask in [Discord](https://discord.gg/gk8jAdXWmj) or [open an issue](https://github.com/bmad-code-org/BMAD-METHOD/issues).
 
 :::tip[Key Takeaways]
 - **Start small** - Your first agent should solve one problem well
@@ -169,3 +178,8 @@ Study the reference agents in `src/modules/bmb/reference/agents/`:
 - **Iterate often** - Test your agent and refine based on behavior
 - **Learn from examples** - Study reference agents before building your own
 :::
+
+## Getting Help
+
+- **[Discord Community](https://discord.gg/gk8jAdXWmj)** - Ask in #bmad-method-help or #report-bugs-and-issues
+- **[GitHub Issues](https://github.com/bmad-code-org/BMAD-METHOD/issues)** - Report bugs or request features

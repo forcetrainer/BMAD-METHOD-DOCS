@@ -226,21 +226,19 @@ Load the Analyst agent and run `brainstorm-project` before `workflow-init`.
 **Can I skip workflow-init and workflow-status?**
 Yes, once you learn the flow. Use the Quick Reference to go directly to needed workflows.
 
-## Getting Help
-
-- **During workflows** — Agents guide you with questions and explanations
-- **Community** — [Discord](https://discord.gg/gk8jAdXWmj) (#bmad-method-help, #report-bugs-and-issues)
-- **Documentation** — [BMM Workflow Reference](/docs/reference/workflows/index.md)
-- **Video tutorials** — [BMad Code YouTube](https://www.youtube.com/@BMadCode)
-
-## Key Takeaways
-
-:::tip[Remember These]
+:::tip[Key Takeaways]
 - **Always use fresh chats** — Load agents in new chats for each workflow
 - **Let workflow-status guide you** — Ask any agent for status when unsure
 - **Track matters** — Quick Flow uses tech-spec; Method/Enterprise need PRD and architecture
 - **Tracking is automatic** — Status files update themselves
 - **Agents are flexible** — Use menu numbers, shortcuts (`*prd`), or natural language
 :::
+
+## Getting Help
+
+- **During workflows** — Agents guide you with questions and explanations
+- **Community** — [Discord](https://discord.gg/gk8jAdXWmj) (#bmad-method-help, #report-bugs-and-issues)
+- **Documentation** — [BMM Workflow Reference](/docs/reference/workflows/index.md)
+- **Video tutorials** — [BMad Code YouTube](https://www.youtube.com/@BMadCode)
 
 Ready to start? Install BMad, load the Analyst, run `workflow-init`, and let the agents guide you.

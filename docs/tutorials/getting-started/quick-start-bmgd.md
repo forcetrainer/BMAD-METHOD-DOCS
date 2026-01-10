@@ -240,21 +240,19 @@ BMGD includes 24 game type templates (RPG, platformer, puzzle, strategy, etc.) t
 **Can I change my design later?**
 Yes. Documents are living artifacts—return to update them as your vision evolves. The SM agent has `correct-course` for scope changes.
 
-## Getting Help
-
-- **During workflows** — Agents guide you with questions and explanations
-- **Community** — [Discord](https://discord.gg/gk8jAdXWmj) (#bmad-method-help, #report-bugs-and-issues)
-- **Documentation** — [BMGD Workflow Reference](/docs/reference/workflows/bmgd-workflows.md)
-- **Video tutorials** — [BMad Code YouTube](https://www.youtube.com/@BMadCode)
-
-## Key Takeaways
-
-:::tip[Remember These]
+:::tip[Key Takeaways]
 - **Always use fresh chats** — Load agents in new chats for each workflow
 - **Game Brief first** — It informs everything that follows
 - **Use game type templates** — 24 templates provide genre-specific GDD structure
 - **Documents evolve** — Return to update them as your vision grows
 - **Solo Dev for speed** — Use Game Solo Dev for rapid prototyping
 :::
+
+## Getting Help
+
+- **During workflows** — Agents guide you with questions and explanations
+- **Community** — [Discord](https://discord.gg/gk8jAdXWmj) (#bmad-method-help, #report-bugs-and-issues)
+- **Documentation** — [BMGD Workflow Reference](/docs/reference/workflows/bmgd-workflows.md)
+- **Video tutorials** — [BMad Code YouTube](https://www.youtube.com/@BMadCode)
 
 Ready to start? Load the **Game Designer** agent and run `create-game-brief` to capture your game vision.
