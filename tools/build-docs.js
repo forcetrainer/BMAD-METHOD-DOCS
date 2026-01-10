@@ -548,7 +548,7 @@ function checkDocLinks() {
   printHeader('Checking documentation links');
 
   try {
-    execSync('node tools/validate-doc-links.js', {
+    execSync('node tools/validate-relative-links.js', {
       cwd: PROJECT_ROOT,
       stdio: 'inherit',
     });
