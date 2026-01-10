@@ -6,10 +6,10 @@
  *   ./path/index.md → ./path/ (index.md becomes directory root)
  *   ../path/file.md#anchor → ../path/file/#anchor
  *   ./file.md?query=param → ./file/?query=param
- *   /docs/absolute/path/file.md → /absolute/path/file/
+ *   /docs/absolute/path/file.md → {basePath}/absolute/path/file/
  *
  * For absolute paths starting with /docs/, the /docs prefix is stripped
- * since the Astro site serves content from the docs directory as the root.
+ * and replaced with the configured basePath (defaults to '/').
  *
  * Affects relative links (./, ../) and absolute paths (/) - external links are unchanged
  */
@@ -21,9 +21,12 @@ import { visit } from 'unist-util-visit';
  *
  * The returned transformer walks the HTML tree and rewrites anchor `href` values that are relative paths (./, ../) or absolute paths (/) pointing to `.md` files. It preserves query strings and hash anchors, rewrites `.../index.md` to the directory root path (`.../`), and rewrites other `.md` file paths by removing the `.md` extension and ensuring a trailing slash. External links (http://, https://) and non-.md links are left unchanged.
  *
+ * @param {Object} options - Plugin options
+ * @param {string} [options.basePath='/'] - Base path to prepend to absolute links
  * @returns {function} A HAST tree transformer that mutates `a` element `href` properties as described.
  */
-export default function rehypeMarkdownLinks() {
+export default function rehypeMarkdownLinks(options = {}) {
+  const basePath = options.basePath || '/';
   return (tree) => {
     visit(tree, 'element', (node) => {
       // Only process anchor tags with href
@@ -82,9 +85,13 @@ export default function rehypeMarkdownLinks() {
         }
       }
 
-      // Strip /docs/ prefix from absolute paths (repo-relative → site-relative)
+      // Strip /docs/ prefix from absolute paths and prepend basePath (repo-relative → site-relative)
       if (urlPath.startsWith('/docs/')) {
-        urlPath = urlPath.slice(5); // Remove '/docs' prefix, keeping the leading /
+        // Remove '/docs' prefix and prepend basePath
+        // basePath already has trailing slash, urlPath.slice(5) starts with /
+        // So we need: basePath (e.g., '/BMAD-METHOD-DOCS/') + path without leading slash
+        const pathWithoutDocs = urlPath.slice(6); // Remove '/docs/' to get path without leading slash
+        urlPath = basePath + pathWithoutDocs;
       }
 
       // Transform .md to /

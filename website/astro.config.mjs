@@ -28,7 +28,7 @@ export default defineConfig({
   },
 
   markdown: {
-    rehypePlugins: [rehypeMarkdownLinks],
+    rehypePlugins: [[rehypeMarkdownLinks, { basePath }]],
   },
 
   integrations: [
